@@ -1,11 +1,10 @@
-# Script generated with import_catkin_packages.py
-# For more information: https://github.com/bchretien/arch-ros-stacks
+# Contributor: Firas Zaidan <firas@zaidan.de>
 pkgdesc="ROS -  amcl is a probabilistic localization system for a robot moving in 2D."
 url='http://wiki.ros.org/amcl'
 
 pkgname='ros-kinetic-amcl'
-pkgver='1.14.0'
-_pkgver_patch=1
+pkgver='1.14.1'
+_pkgver_patch=0
 arch=('any')
 pkgrel=1
 license=('LGPL')
@@ -28,15 +27,15 @@ ros_depends=(ros-kinetic-dynamic-reconfigure
 depends=(${ros_depends[@]})
 
 # Git version (e.g. for debugging)
- _tag=release/kinetic/amcl/${pkgver}-${_pkgver_patch}
- _dir=${pkgname}
- source=("${_dir}"::"git+https://github.com/ros-gbp/navigation-release.git"#tag=${_tag})
- sha256sums=('SKIP')
+# _tag=release/kinetic/amcl/${pkgver}-${_pkgver_patch}
+# _dir=${pkgname}
+# source=("${_dir}"::"git+https://github.com/ros-gbp/navigation-release.git"#tag=${_tag})
+# sha256sums=('SKIP')
 
 # Tarball version (faster download)
-# _dir="navigation-release-release-kinetic-amcl-${pkgver}-${_pkgver_patch}"
-# source=("${pkgname}-${pkgver}-${_pkgver_patch}.tar.gz"::"https://github.com/ros-gbp/navigation-release/archive/release/kinetic/amcl/${pkgver}-${_pkgver_patch}.tar.gz")
-# sha256sums=('aeea947df5c02c4987c055c863e3c7ca56d011396815f537eafa69efcf33b916')
+_dir="navigation-release-release-kinetic-amcl-${pkgver}-${_pkgver_patch}"
+source=("${pkgname}-${pkgver}-${_pkgver_patch}.tar.gz"::"https://github.com/ros-gbp/navigation-release/archive/release/kinetic/amcl/${pkgver}-${_pkgver_patch}.tar.gz")
+sha256sums=('5a7afb4c76011a55a0210b920e7debfef8f024bf2b403c380c3955e759c67c5a')
 
 build() {
   # Use ROS environment variables
